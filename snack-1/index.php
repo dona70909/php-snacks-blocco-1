@@ -47,6 +47,7 @@
                 <?php foreach($student_content["votes"] as $index => $value) { ?>
                     <span><?php echo $value ?></span>
                 <?php } ?> 
+                <span>Media: <?php echo array_sum($student_content["votes"]) / count($student_content["votes"]) ?></span>
                 <hr>    
             <?php } ?>  
         </div>
