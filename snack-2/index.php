@@ -30,6 +30,17 @@
 
     ];
 
+    $active_ads = [];
+
+    foreach($ads as $ad) {
+        if($ad["is_active"]) {
+            $active_ads[] = $ad;
+        }
+    };
+
+    
+    $random_ad = $active_ads[rand(0,count($active_ads) - 1)];
+
 
 ?>
 
@@ -50,16 +61,7 @@
 </head>
 <body>
     <main>
-        <?php foreach($ads as $ad) { ?>
-            <!-- <p><?php var_dump($ad) ?></p> -->
-            <?php foreach($ad as $ad_array_value) { ?>
-                <!-- <p><?php var_dump($ad["is_active"]) ?></p> -->
-                <?php if($ad["is_active"] === true) {?>
-                    <img src="<?php echo $ad_array_value ?>" alt="img">
-                <?php } ?>    
-            <?php } ?>    
-
-        <?php } ?>    
+        <img src="<?php echo $random_ad['image_path']  ?>" alt="">
     </main>
 </body>
 </html>
