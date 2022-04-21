@@ -44,7 +44,7 @@
                 <p><?php echo $student_content['name'] ?></p>
                 <p><?php echo $student_content['lastname'] ?></p>
                 <span>Voti: </span>
-                <?php foreach($student_content["votes"] as $content => $value) { ?>
+                <?php foreach($student_content["votes"] as $index => $value) { ?>
                     <span><?php echo $value ?></span>
                 <?php } ?> 
                 <hr>    
