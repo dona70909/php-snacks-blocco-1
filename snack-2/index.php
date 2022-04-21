@@ -32,3 +32,28 @@
 
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad</title>
+</head>
+<body>
+    <main>
+        <?php foreach($ads as $ad) { ?>
+            <!-- <p><?php var_dump($ad) ?></p> -->
+            <?php foreach($ad as $ad_array_value) { ?>
+                <!-- <p><?php var_dump($ad["is_active"]) ?></p> -->
+                <?php if($ad["is_active"] === true) {?>
+                    <img src=<?php echo $ad_array_value ?> alt="">
+                <?php } ?>    
+            <?php } ?>    
+
+        <?php } ?>    
+    </main>
+</body>
+</html>
